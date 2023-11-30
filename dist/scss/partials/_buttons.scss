@@ -1,0 +1,66 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: rem(1);
+  @include t(0.2s, 0s);
+  border-radius: 0;
+  font-family: $font_sapiens;
+  margin: 0 !important;
+
+  &.btn-default {
+    font-size: rem(20);
+    gap: rem(5);
+    color: $dark;
+    min-height: rem(65);
+    padding: 0 rem(22) !important;
+    background-image: url(../img/btn-bg.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-width: 990px) {
+      &:hover {
+        color: $violet;
+      }
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  &.btn-play {
+    min-width: rem(57);
+    width: rem(57);
+    padding: 0 !important;
+    min-height: rem(57);
+    height: rem(57);
+    background: none;
+    border: none;
+    border-radius: 50%;
+
+    @media (min-width: 990px) {
+      &:hover {
+        svg {
+          g {
+            circle {
+              &:first-child {
+                fill: #8660ce
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 767px) {
+      width: auto;
+      min-width: rem(137);
+      min-height: rem(137);
+      height: rem(137);
+    }
+  }
+
+}

@@ -1,0 +1,121 @@
+h1,
+.h1 {
+  font-size: rem(48);
+  line-height: 1.2;
+  margin-bottom: rem(17);
+
+  @media (max-width: 767px) {
+    font-size: rem(35);
+  }
+}
+
+h2,
+.h2 {
+  font-size: rem(48);
+  line-height: 1.2;
+  margin-bottom: rem(16);
+
+  @media (max-width: 767px) {
+    font-size: rem(35);
+  }
+}
+
+h3,
+.h3 {
+  font-size: rem(38);
+  line-height: 1.2;
+  margin-bottom: rem(15);
+
+  @media (max-width: 767px) {
+    font-size: rem(30);
+  }
+}
+
+h4,
+.h4 {
+  font-size: rem(24);
+  line-height: 1.2;
+  margin-bottom: rem(15);
+
+  @media (max-width: 767px) {
+    font-size: rem(20);
+  }
+}
+
+h5,
+.h5 {
+  font-size: rem(21);
+  line-height: 1.43;
+  margin-bottom: rem(15);
+
+  @media (max-width: 767px) {
+    font-size: rem(19);
+  }
+}
+
+h6,
+.h6 {
+  font-size: rem(20);
+  line-height: 1.43;
+  margin-bottom: rem(15);
+
+  @media (max-width: 767px) {
+    font-size: rem(18);
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $font_sapiens_bold;
+  text-shadow: -2px 2px 0 #101D3F,
+    4px 4px 0 #101D3F,
+    2px -2px 0 #101D3F,
+    -2px -2px 0 #101D3F;
+}
+
+p {
+  line-height: normal;
+  font-weight: 400;
+  margin-bottom: rem(21);
+}
+
+a:not(.btn):not(.dropdown-item):not(.nav-link) {
+  color: $dark;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+.text-white {
+  color: white !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a:not(.btn),
+  label,
+  .subtitle {
+    color: inherit !important;
+  }
+}
