@@ -1,0 +1,121 @@
+html {
+  font-size: $html-font-size;
+}
+
+body {
+  font-family: $font_family;
+  font-size: $font_size;
+  font-weight: $font_weight;
+  color: $text_color;
+  // background-color: $body_bg;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-holder {
+  padding-top: rem(0);
+  overflow: hidden;
+  position: relative;
+}
+
+section {
+  width: 100%;
+  float: left;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: rem(70) 0;
+  z-index: 20;
+
+
+
+  .container,
+  .container-fluid {
+    position: relative;
+    z-index: 20;
+  }
+
+  @media (max-width: 990px) {
+    padding: rem(50) 0;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+.navbar-toggler {
+  position: relative;
+  background-color: transparent;
+  width: rem(50);
+  min-width: rem(50);
+  min-height: rem(52);
+  border: none !important;
+  @include t(0.2s, 0s);
+
+  @media (max-width: 990px) {
+    margin-right: rem(1);
+  }
+
+  @media (max-width: 767px) {
+    margin-top: rem(-3);
+  }
+
+  @media (min-width: 767px) {
+    margin-right: rem(-10);
+  }
+
+  span {
+    @include t(0.2s, 0s);
+    background-color: $nav_link_color;
+    height: 2px;
+    position: absolute;
+    width: rem(30);
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    margin-top: 0;
+    border-radius: rem(8);
+
+    &:nth-of-type(1) {
+      transform: translate(-50%, rem(-10)) rotate(0deg);
+    }
+
+    &:nth-of-type(2) {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    &:nth-of-type(3) {
+      transform: translate(-50%, rem(8)) rotate(0deg);
+    }
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &[aria-expanded="true"] {
+    color: transparent !important;
+
+    span {
+      &:nth-of-type(1) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+}
