@@ -1,0 +1,30 @@
+.footer {
+  padding: 0;
+
+  .navbar-brand {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    max-width: rem(157);
+  }
+
+  #footerMenu {
+    gap: rem(28);
+    margin: rem(40) 0;
+
+    @media (max-width: 990px) {
+    gap: rem(20);
+    }
+  }
+
+  .footer-bottom {
+    background: rgba(255, 255, 255, 0.02);
+    width: 100%;
+    float: left;
+
+    p {
+      opacity: 0.4;
+    }
+  }
+
+}
